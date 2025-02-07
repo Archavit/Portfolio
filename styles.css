@@ -1,0 +1,338 @@
+/* Import Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap');
+
+:root {
+    --primary-color: #007bff;
+    --bg-color: #93c7ff62;
+    --text-color: #000000;
+    --card-bg: #cefffbc9;
+    --shadow: 0 4px 8px rgba(0, 0, 0, 0.541);
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: var(--bg-color);
+    color: var(--text-color);
+    transition: background 0.5s ease-in-out, color 0.5s ease-in-out; /* Smooth transition for dark mode */
+}
+
+/* Smooth Scroll */
+html {
+    scroll-behavior: smooth;
+}
+
+/* HEADER */
+.header {
+    background: #007bff;
+    padding: 1rem;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    box-shadow: var(--shadow);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 10;
+}
+
+.nav {
+    display: flex;
+    align-items: center;
+}
+
+.nav__list {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.nav__link {
+    text-decoration: none;
+    color: var(--text-color);
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.nav__link:hover {
+    color: var(--primary-color);
+}
+
+/* DARK MODE */
+.dark-mode {
+    --bg-color: #222;
+    --text-color: #f5f5f5;
+    --card-bg: #333;
+}
+
+.dark-mode-toggle {
+    cursor: pointer;
+    font-size: 1.5rem;
+}
+
+/* SECTIONS */
+.section-title {
+    text-align: center;
+    margin: 2rem 0;
+    font-weight: 700;
+    color: var(--primary-color);
+}
+
+/* HOME */
+.home {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 90vh;
+    gap: 10px;
+    padding: 2rem;
+    transition: 0.3s ease-in-out;
+}
+
+.home__content h1 {
+    font-size: 2.5rem;
+    margin: 0;
+    transition: 0.3s ease-in-out;
+}
+
+.home__content span {
+    color: var(--primary-color);
+}
+
+.home__image img {
+    transition: transform 0.5s ease, box-shadow 0.5s ease;
+}
+
+.home__image img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 15px rgba(0, 123, 255, 0.5);
+}
+
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background: var(--primary-color);
+    color: #fff;
+    border-radius: 5px;
+    transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.btn:hover {
+    background: #0056b3;
+    transform: translateY(-3px);
+}
+
+/* ABOUT */
+.about__content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    align-items: center;
+}
+
+/* SKILLS */
+/* Center the Skills Section */
+.skills {
+    display: flex;
+    flex-direction: column;
+    align-items: center;  /* Center the section horizontally */
+    text-align: center;    /* Center the text inside the section */
+    padding: 40px 0;      /* Add some space around the section */
+}
+
+.skills__grid {
+    display: flex;
+    justify-content: center;  /* Center the grid horizontally */
+    gap: 20px;               /* Space between each skill */
+    flex-wrap: wrap;          /* Allow wrapping of items if the screen is small */
+    margin-top: 20px;
+}
+
+.skill {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 150px;             /* Set a fixed width for the skill items */
+}
+
+.skill i {
+    font-size: 50px;          /* Increase icon size */
+    margin-bottom: 10px;
+}
+
+.skill-bar {
+    width: 100%;
+    background-color:#000000;
+    border-radius: 5px;
+    height: 8px;
+    margin-top: 10px;
+}
+
+.skill-bar-fill {
+    display: block;
+    height: 100%;
+    border-radius: 5px;
+}
+
+/* Skill Bar Colors */
+.skill-bar.html .skill-bar-fill {
+    background-color: #e44d26;
+    transition: background-color 0.3s ease, transform 0.3s ease; /* เพิ่มการเปลี่ยนสีและการเคลื่อนไหว */
+}
+
+.skill-bar.css .skill-bar-fill {
+    background-color: #2965f1;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.skill-bar.javascript .skill-bar-fill {
+    background-color: #f7df1e;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.skill-bar.language .skill-bar-fill {
+    background-color: #61c04e;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+/* Add Hover Effect to Skill Bar */
+.skill-bar.html .skill-bar-fill:hover {
+    background-color: #ff5733; /* เปลี่ยนสีเมื่อ hover */
+    transform: translateY(-5px); /* เลื่อนขึ้นเล็กน้อย */
+}
+
+.skill-bar.css .skill-bar-fill:hover {
+    background-color: #1e3bb3; /* เปลี่ยนสีเมื่อ hover */
+    transform: translateY(-5px);
+}
+
+.skill-bar.javascript .skill-bar-fill:hover {
+    background-color: #e1c700; /* เปลี่ยนสีเมื่อ hover */
+    transform: translateY(-5px);
+}
+
+.skill-bar.language .skill-bar-fill:hover {
+    background-color: #45a049; /* เปลี่ยนสีเมื่อ hover */
+    transform: translateY(-5px);
+}
+
+/* Add Pulse Animation Effect */
+.skill-bar-fill {
+    animation: pulse 1.5s infinite; /* เพิ่มการเคลื่อนไหวแบบ pulse */
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+        opacity: 0.8;
+    }
+    50% {
+        transform: scale(1.1);
+        opacity: 1;
+    }
+    100% {
+        transform: scale(1);
+        opacity: 0.8;
+    }
+}
+
+.skill-bar:hover {
+    animation: none; /* หยุดการเคลื่อนไหวเมื่อ hover */
+}   
+
+/* Skill Bar Colors */
+.skill-bar.html .skill-bar-fill {
+    background-color: #e44d26;
+    position: relative;
+    height: 8px;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    font-weight: bold;
+    font-size: 14px;
+    transition: all 0.3s ease;
+}
+
+.skill-bar.css .skill-bar-fill {
+    background-color: #2965f1;
+    position: relative;
+    height: 8px;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    font-weight: bold;
+    font-size: 14px;
+    transition: all 0.3s ease;
+}
+
+.skill-bar.javascript .skill-bar-fill {
+    background-color: #f7df1e;
+    position: relative;
+    height: 8px;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    font-weight: bold;
+    font-size: 14px;
+    transition: all 0.3s ease;
+}
+
+.skill-bar.language .skill-bar-fill {
+    background-color: #61c04e;
+    position: relative;
+    height: 8px;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    font-weight: bold;
+    font-size: 14px;
+    transition: all 0.3s ease;
+}
+
+
+
+/* WORK */
+.work__grid {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    flex-wrap: wrap;
+    transition: 0.3s ease-in-out;
+}
+
+.work__grid img {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.work__grid img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 15px rgba(0, 123, 255, 0.5);
+}
+
+/* CONTACT */
+.contact__social {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.contact__icon {
+    font-size: 2rem;
+    color: var(--primary-color);
+    transition: color 0.3s ease;
+}
+
+.contact__icon:hover {
+    color: #0056b3;
+}

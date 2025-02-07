@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ARCHAWIT JUNTHING</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://cdn.jsdelivr.net/npm/boxicons@2.0.5/css/boxicons.min.css" rel="stylesheet">
+</head>
+
+<body>
+    <!-- HEADER -->
+    <header class="header">
+        <nav class="nav">
+            <a href="#" class="nav__logo"></a>
+            <ul class="nav__list">
+                <li><a href="#home" class="nav__link">Home</a></li>
+                <li><a href="#about" class="nav__link">About</a></li>
+                <li><a href="#skills" class="nav__link">Skills</a></li>
+                <li><a href="#work" class="nav__link">Work</a></li>
+                <li><a href="#contact" class="nav__link">Contact</a></li>
+            </ul>
+            <div class="dark-mode-toggle">
+                <i class="bx bx-moon" id="theme-icon"></i>
+            </div>
+        </nav>
+    </header>
+
+    <!-- HOME -->
+    <section id="home" class="home">
+        <div class="home__content" align="center">
+            <p>Explore My Work & Achievements</p>
+            <h1>Hello, I'm<span> Gus</span></h1>
+            <p>an enthusiastic IT student at KMUTNB.</p>
+            <div class="home__image">
+                <img src="/img/gus1.jpg" alt="Profile" class="profile-img" style=" border-radius: 50%; width: 200px; height: 200px; object-fit: cover; border: 3px solid #fff;">
+            </div>
+            <a href="#contact" class="btn">Contact Me</a>
+        </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section id="about" class="about">
+        <h2 class="section-title">About Me</h2>
+        <div class="about__content">
+            <p> "I am Archawit Junthing, a 22-year-old student at (KMUTT). I have a strong passion for development and website design, including work on Kwang Fiction, and a keen interest in military tactical matters."</p>
+        </div>
+    </section>
+
+    <!-- SKILLS -->
+    <section id="skills" class="skills">
+        <h2 class="section-title">Skills</h2>
+        <div class="skills__grid">
+            <div class="skill">
+                <i class="bx bxl-html5"></i> HTML
+                <div class="skill-bar html">
+                    <span class="skill-bar-fill" style="width: 90%;">90%</span>
+                </div>
+            </div>
+            <div class="skill">
+                <i class="bx bxl-css3"></i> CSS
+                <div class="skill-bar css">
+                    <span class="skill-bar-fill" style="width: 85%;">85%</span>
+                </div>
+            </div>
+            <div class="skill">
+                <i class="bx bxl-javascript"></i> JavaScript
+                <div class="skill-bar javascript">
+                    <span class="skill-bar-fill" style="width: 75%;">75%</span>
+                </div>
+            </div>
+            <div class="skill">
+                <i class="bx bxs-paint"></i> Thailand & English
+                <div class="skill-bar language">
+                    <span class="skill-bar-fill" style="width: 80%;">80%</span>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+
+    <!-- WORK -->
+    <section id="work" class="work">
+        <h2 class="section-title">My Work</h2>
+        <div class="work__grid">
+            <img src="/img/gus2.jpg" alt="Work 1" class="work-img" style=" border-radius: 50%; width: 200px; height: 200px; object-fit: cover; border: 3px solid #fff;">
+            <img src="/img/gus3.jpg" alt="Work 2" class="work-img" style=" border-radius: 50%; width: 200px; height: 200px; object-fit: cover; border: 3px solid #fff;">
+            <img src="/img/gus4.jpg" alt="Work 3" class="work-img" style=" border-radius: 50%; width: 200px; height: 200px; object-fit: cover; border: 3px solid #fff;">
+        </div>
+
+        <div class="work__grid">
+            <img src="/img/gus5.png" alt="Work 1" class="work-img" style=" border-radius: 50%; width: 200px; height: 200px; object-fit: cover; border: 3px solid #fff;">
+            <img src="/img/gus7.jpg" alt="Work 2" class="work-img" style=" border-radius: 50%; width: 200px; height: 200px; object-fit: cover; border: 3px solid #fff;">
+            <img src="/img/gus8.jpg" alt="Work 3" class="work-img" style=" border-radius: 50%; width: 200px; height: 200px; object-fit: cover; border: 3px solid #fff;">
+            <img src="/img/gus6.png" alt="Work 3" class="work-img" style=" border-radius: 50%; width: 200px; height: 200px; object-fit: cover; border: 3px solid #fff;">
+        </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" class="contact" align="center">
+        <h2 class="section-title">Contact Me</h2>
+        <p>Reach out to me via social media</p>
+        <div class="contact__social">
+            <a href="https://www.facebook.com/gus.127.group" class="contact__icon"><i class="bx bxl-facebook"></i></a>
+            <a href="#" class="contact__icon"><i class="bx bxl-instagram"></i></a>
+            <a href="#" class="contact__icon"><i class="bx bxl-twitter"></i></a>
+        </div>
+    </section>
+
+    <script>
+        // Smooth Scroll
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        // Dark Mode Toggle
+        const themeIcon = document.getElementById("theme-icon");
+        themeIcon.addEventListener("click", () => {
+            document.body.classList.toggle("dark-mode");
+            themeIcon.classList.toggle("bx-moon");
+            themeIcon.classList.toggle("bx-sun");
+        });
+    </script>
+</body>
+</html>
